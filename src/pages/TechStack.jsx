@@ -122,7 +122,7 @@ function Sphere() {
 export default function TechSphere() {
   return (
     <>
-      <section className=" px-6 flex items-center py-10">
+      <section id="skills" className=" px-6 flex items-center py-10">
         <div className="max-w-6xl mx-auto w-full">
           {/* Responsive two column grid */}
           <div className="grid md:grid-cols-2 gap-12 items-center">

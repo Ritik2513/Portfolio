@@ -2,7 +2,7 @@ import React from "react";
 
 const milestones = [
   {
-    year: "2020",
+    year: "2019 - 2022",
     title: "🎓 BCA — The Genesis",
     desc: "Discovered the infinite possibilities of web development. Spent nights mastering CSS grid and the art of the perfect div.",
     tags: ["HTML/CSS", "JAVASCRIPT"],
@@ -10,15 +10,23 @@ const milestones = [
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600",
   },
   {
-    year: "2023",
-    title: "💼 Digipodium Workflow",
+    year: "Jan 2022 - Jun 2022",
+    title: "💼 Digipodium (Internship)",
     desc: "Internship that bridged the gap between code and clients. Real world demands, real world solutions, and the beauty of production code.",
-    tags: ["PRODUCTION", "UI/UX"],
+    tags: ["MERN", "PRODUCTION", "UI/UX"],
     image:
       "https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=2070&auto=format&fit=crop",
   },
   {
-    year: "2024",
+    year: "2022 - 2023",
+    title: "📚 NIMCET Preparation",
+    desc: "Dedicated year focused on mastering Data Structures, Algorithms, Mathematics, and Computer Science fundamentals for the NIMCET entrance exam. Built strong problem-solving discipline through consistent practice, mock tests, and competitive programming.",
+    tags: ["Study", "Preparation"],
+    image:
+      "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    year: "2023 - 2025",
     title: "🚀 MCA & MERN Deep Dive",
     desc: "Transitioning from visual layouts to complex data architectures and backend systems.",
     tags: ["ARCHITECTURE", "MERN"],
@@ -26,10 +34,10 @@ const milestones = [
       "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2070&auto=format&fit=crop",
   },
   {
-    year: "2025",
-    title: "🏢 Click Melon Media",
+    year: "2025 - 2026",
+    title: "🏢 Click Melon Media Pvt. Ltd.",
     desc: "Architecting high-performance digital experiences for modern brands.",
-    tags: ["LEADERSHIP", "SHIPPING"],
+    tags: ["LEADERSHIP", "SHIPPING", "MERN", "VPS Deployment", "Ownership"],
     image:
       "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2070&auto=format&fit=crop",
   },
@@ -37,7 +45,7 @@ const milestones = [
 
 export default function Journey() {
   return (
-    <section className="w-full text-white">
+    <section id="experience" className="w-full text-white py-24">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row">
         {/* LEFT PANEL */}
         <div className="lg:w-1/3 lg:h-screen lg:sticky lg:top-0 border-b lg:border-b-0 lg:border-r border-white/10">
@@ -47,9 +55,10 @@ export default function Journey() {
                 MY STORY
               </p>
 
-              <h1 className="font-display text-5xl lg:text-7xl leading-tight">
-                Journey <br /> Archived
+              <h1 className="heading">
+                Crafting My Path in Tech
               </h1>
+              <p className="subheading">From Student → Intern → Student → Working Professional</p>
             </div>
 
             <div className="mt-20 lg:mt-0 flex items-end justify-between">
@@ -57,9 +66,7 @@ export default function Journey() {
                 SCROLL TO EXPLORE
               </p>
 
-              <div className="hidden lg:block text-[10px] tracking-[0.6em] rotate-90 origin-right opacity-40">
-                CHRONICLES
-              </div>
+              
             </div>
           </div>
         </div>
@@ -99,7 +106,7 @@ export default function Journey() {
                   {item.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="text-xs tracking-widest border border-white/20 px-3 py-1 rounded-full hover:border-white transition"
+                      className="text-xs tracking-widest border border-white/20 px-3 py-1 rounded-full glass transition"
                     >
                       {tag}
                     </span>

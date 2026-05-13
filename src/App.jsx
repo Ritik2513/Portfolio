@@ -8,6 +8,8 @@ import TechStack from "./pages/TechStack";
 import Journey from "./pages/Journey";
 import DevOps from "./pages/Devops";
 import Contact from "./pages/Contact";
+import Testimonials from "./pages/Testimonials";
+import Intro from "./pages/Intro";
 
 const App = () => {
   return (
@@ -15,9 +17,11 @@ const App = () => {
       <Navbar />
       {/* <Hero /> */}
       <Drive />
+      <Intro/>
       <Impact />
       <TechStack/>
       <Projects />
+      {/* <Testimonials/> */}
       <Journey/>
       <DevOps/>
       <Contact/>

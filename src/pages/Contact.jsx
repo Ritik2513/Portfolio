@@ -31,7 +31,7 @@ function Particles() {
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative py-32 px-6">
+    <section id="contact" className="relative py-24 px-6">
       <div className="max-w-5xl mx-auto">
         <div className="relative glass rounded-[2rem] overflow-hidden p-10 md:p-16 text-center shadow-elegant">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-accent/20 to-transparent" />
@@ -59,19 +59,20 @@ export default function Contact() {
             </motion.p>
             <div className="mt-8 flex flex-wrap gap-3 justify-center">
               <a
-                href="mailto:hello@aarav.dev"
+                href="mailto:ritikgupta2513@gmail.com"
                 className="px-6 py-3 rounded-full bg-gradient-primary text-primary-foreground font-medium shadow-glow hover:opacity-90 transition"
               >
                 Hire Me
               </a>
               <a
-                href="#"
+                href="/Resume/Ritik_Kumar_Gupta.pdf"
+                download="Ritik_Kumar_Gupta_Resume.pdf"
                 className="px-6 py-3 rounded-full glass font-medium hover:bg-white/10 transition"
               >
                 View Resume
               </a>
               <a
-                href="mailto:hello@aarav.dev"
+                href="mailto:ritikgupta2513@gmail.com"
                 className="px-6 py-3 rounded-full glass font-medium hover:bg-white/10 transition"
               >
                 Contact Me
@@ -80,7 +81,7 @@ export default function Contact() {
           </div>
         </div>
         <footer className="mt-16 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Aarav Mehta · Built with React, R3F, GSAP
+          © {new Date().getFullYear()} Ritik Kr. Gupta · Built with React, R3F, GSAP
           & Framer Motion.
         </footer>
       </div>

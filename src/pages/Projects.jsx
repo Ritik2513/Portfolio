@@ -88,7 +88,7 @@ const Projects = () => {
   ];
   return (
     <>
-      <section className="py-24 min-h-screen font-poppins">
+      <section id="projects" className="py-24 min-h-screen font-poppins">
         {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

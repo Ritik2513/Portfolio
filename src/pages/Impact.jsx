@@ -26,7 +26,7 @@ const Impact = () => {
   ];
 
   return (
-    <section id="impact" className="relative py-20 md:py-28 px-6 font-poppins">
+    <section id="impact" className="relative py-20 md:py-24 px-6 font-poppins">
       <div className="max-w-6xl mx-auto text-center">
         {/* Section heading */}
         <motion.div

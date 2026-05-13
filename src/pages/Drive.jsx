@@ -5,7 +5,7 @@ const Drive = () => {
   return (
     <section className="relative md:min-h-screen py-24 overflow-hidden flex items-center justify-center px-6">
       {/* Container */}
-      <div className="max-w-7xl mx-auto text-center">
+      <div className="max-w-6xl mx-auto text-center">
         {/* Availability pill */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

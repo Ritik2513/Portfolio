@@ -48,7 +48,7 @@ export default function DevOps() {
   }, []);
 
   return (
-    <section className="relative py-32 px-6" ref={ref}>
+    <section className="relative py-24 px-6" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <div className="mb-16 max-w-2xl">
           <p className="text-sm uppercase tracking-[0.25em] text-muted-foreground mb-3">

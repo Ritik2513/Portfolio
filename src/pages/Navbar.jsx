@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 
 const links = [
   { href: "#impact", label: "Impact" },
-  { href: "#projects", label: "Work" },
   { href: "#skills", label: "Skills" },
+  { href: "#projects", label: "Work" },
   { href: "#experience", label: "Journey" },
   { href: "#contact", label: "Contact" },
 ];
@@ -29,10 +29,11 @@ export default function Navbar() {
           ))}
         </nav>
         <a
-          href="#contact"
+          href="/Resume/Ritik_Kumar_Gupta.pdf"
+          download="Ritik_Kumar_Gupta_Resume.pdf"
           className="text-sm px-4 py-1.5 rounded-full bg-gradient-primary text-primary-foreground font-medium shadow-glow hover:opacity-90 transition"
         >
-          Hire Me
+          View Resume
         </a>
       </div>
     </motion.header>
