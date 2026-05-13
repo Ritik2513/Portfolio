@@ -96,13 +96,13 @@ const Projects = () => {
           viewport={{ once: true }}
           className="mb-16 max-w-2xl mx-auto text-center px-6"
         >
-          <p className="text-sm uppercase tracking-[0.25em] text-muted-foreground mb-3">
+          <p className="top">
             Selected Work
           </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+          <h2 className="heading">
             Products shipped, not just demos.
           </h2>
-          <p className="mt-6 text-sm sm:text-base md:text-lg text-muted-foreground">
+          <p className="subheading">
             Each project is live in production with real users, real revenue.
           </p>
         </motion.div>

@@ -1,138 +1,114 @@
-"use client";
+import React from "react";
 
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-
-/* ========= DATA ========= */
-
-const journeyData = [
+const milestones = [
   {
     year: "2020",
-    title: "BCA — Started Coding",
-    icon: "🎓",
-    desc: "Discovered web development and built my first UI projects.",
+    title: "🎓 BCA — The Genesis",
+    desc: "Discovered the infinite possibilities of web development. Spent nights mastering CSS grid and the art of the perfect div.",
+    tags: ["HTML/CSS", "JAVASCRIPT"],
+    image:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600",
   },
   {
     year: "2023",
-    title: "Digipodium Internship",
-    icon: "💼",
-    desc: "Worked on real client projects and learned production workflow.",
+    title: "💼 Digipodium Workflow",
+    desc: "Internship that bridged the gap between code and clients. Real world demands, real world solutions, and the beauty of production code.",
+    tags: ["PRODUCTION", "UI/UX"],
+    image:
+      "https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=2070&auto=format&fit=crop",
   },
   {
     year: "2024",
-    title: "MCA — MERN Specialization",
-    icon: "🚀",
-    desc: "Built full-stack apps and strengthened DSA & architecture.",
+    title: "🚀 MCA & MERN Deep Dive",
+    desc: "Transitioning from visual layouts to complex data architectures and backend systems.",
+    tags: ["ARCHITECTURE", "MERN"],
+    image:
+      "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2070&auto=format&fit=crop",
   },
   {
     year: "2025",
-    title: "Click Melon Media",
-    icon: "🏢",
-    desc: "Shipping production websites and real client products.",
+    title: "🏢 Click Melon Media",
+    desc: "Architecting high-performance digital experiences for modern brands.",
+    tags: ["LEADERSHIP", "SHIPPING"],
+    image:
+      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2070&auto=format&fit=crop",
   },
 ];
 
-/* ========= COMPONENT ========= */
-
-export default function JourneyAwwwards() {
-  const sectionRef = useRef(null);
-  const trackRef = useRef(null);
-  const progressRef = useRef(null);
-
-  useEffect(() => {
-    const section = sectionRef.current;
-    const track = trackRef.current;
-    const progress = progressRef.current;
-
-    const totalWidth = track.scrollWidth - window.innerWidth;
-
-    const ctx = gsap.context(() => {
-      // Horizontal scroll
-      gsap.to(track, {
-        x: -totalWidth,
-        ease: "none",
-        scrollTrigger: {
-          trigger: section,
-          start: "top top",
-          end: () => `+=${track.scrollWidth}`,
-          scrub: 1,
-          pin: true,
-        },
-      });
-
-      // Progress line animation
-      gsap.fromTo(
-        progress,
-        { scaleX: 0 },
-        {
-          scaleX: 1,
-          transformOrigin: "left",
-          ease: "none",
-          scrollTrigger: {
-            trigger: section,
-            start: "top top",
-            end: () => `+=${track.scrollWidth}`,
-            scrub: 1,
-          },
-        },
-      );
-
-      // Card animation
-      gsap.from(".journey-card", {
-        opacity: 0,
-        scale: 0.8,
-        rotate: 3,
-        stagger: 0.2,
-        scrollTrigger: {
-          trigger: section,
-          start: "top center",
-        },
-      });
-    }, section);
-
-    return () => ctx.revert();
-  }, []);
-
+export default function Journey() {
   return (
-    <section
-      ref={sectionRef}
-      className="relative h-screen text-white overflow-hidden"
-    >
-      {/* Top heading */}
-      <div className="absolute top-20 left-1/2 -translate-x-1/2 text-center z-10">
-        <p className="uppercase tracking-[0.3em] text-sm text-gray-400">
-          My Career Story
-        </p>
-        <h2 className="text-5xl md:text-7xl font-bold mt-3">
-          From Student → Shipping Products
-        </h2>
-      </div>
-
-      {/* Progress line */}
-      <div className="absolute bottom-16 left-0 w-full h-[2px] bg-white/20">
-        <div ref={progressRef} className="h-full bg-white w-full scale-x-0" />
-      </div>
-
-      {/* Horizontal track */}
-      <div ref={trackRef} className="flex items-center h-full gap-40 px-40 mt-50">
-        {journeyData.map((item, i) => (
-          <div key={i} className="journey-card min-w-[420px]">
-            <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-10 rounded-3xl">
-              <div className="text-6xl mb-6">{item.icon}</div>
-
-              <p className="text-sm text-gray-400 tracking-widest">
-                {item.year}
+    <section className="w-full text-white">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row">
+        {/* LEFT PANEL */}
+        <div className="lg:w-1/3 lg:h-screen lg:sticky lg:top-0 border-b lg:border-b-0 lg:border-r border-white/10">
+          <div className="p-10 lg:p-16 flex flex-col justify-between h-full">
+            <div>
+              <p className="text-xs tracking-[0.4em] opacity-60 mb-6">
+                MY STORY
               </p>
 
-              <h3 className="text-3xl font-bold mt-2 mb-4">{item.title}</h3>
+              <h1 className="font-display text-5xl lg:text-7xl leading-tight">
+                Journey <br /> Archived
+              </h1>
+            </div>
 
-              <p className="text-gray-300 leading-relaxed">{item.desc}</p>
+            <div className="mt-20 lg:mt-0 flex items-end justify-between">
+              <p className="text-xs tracking-[0.5em] opacity-50">
+                SCROLL TO EXPLORE
+              </p>
+
+              <div className="hidden lg:block text-[10px] tracking-[0.6em] rotate-90 origin-right opacity-40">
+                CHRONICLES
+              </div>
             </div>
           </div>
-        ))}
+        </div>
+
+        {/* RIGHT TIMELINE */}
+        <div className="lg:w-2/3 h-screen overflow-y-scroll snap-y snap-mandatory scrollbar-hide">
+          {milestones.map((item, i) => (
+            <section
+              key={i}
+              className="h-screen snap-start flex items-center px-8 sm:px-14 lg:px-20"
+            >
+              <div className="max-w-xl">
+                {/* YEAR */}
+                <p className="text-4xl lg:text-5xl font-display mb-6 opacity-70">
+                  {item.year}
+                </p>
+
+                {/* IMAGE */}
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-56 sm:h-72 object-cover mb-8 rounded-xl shadow-lg"
+                />
+
+                {/* TITLE */}
+                <h2 className="text-2xl sm:text-3xl font-semibold mb-4">
+                  {item.title}
+                </h2>
+
+                {/* DESCRIPTION */}
+                <p className="text-white/70 leading-relaxed mb-6">
+                  {item.desc}
+                </p>
+
+                {/* TAGS */}
+                <div className="flex flex-wrap gap-3">
+                  {item.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="text-xs tracking-widest border border-white/20 px-3 py-1 rounded-full hover:border-white transition"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </section>
+          ))}
+        </div>
       </div>
     </section>
   );
