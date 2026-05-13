@@ -6,6 +6,8 @@ import Drive from "./pages/Drive";
 import Impact from "./pages/Impact";
 import TechStack from "./pages/TechStack";
 import Journey from "./pages/Journey";
+import DevOps from "./pages/Devops";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
       <TechStack/>
       <Projects />
       <Journey/>
+      <DevOps/>
+      <Contact/>
     </>
   );
 };
