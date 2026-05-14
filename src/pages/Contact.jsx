@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
+import { FaLinkedinIn, FaGithub, FaGlobe } from "react-icons/fa";
 
+/* Floating particles */
 function Particles() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -7,11 +9,7 @@ function Particles() {
         <motion.div
           key={i}
           className="absolute w-1 h-1 rounded-full bg-white/40"
-          initial={{
-            x: `${(i * 37) % 100}%`,
-            y: `${(i * 53) % 100}%`,
-            opacity: 0,
-          }}
+          initial={{ opacity: 0 }}
           animate={{ y: ["0%", "-120%"], opacity: [0, 0.8, 0] }}
           transition={{
             duration: 6 + (i % 5),
@@ -31,21 +29,23 @@ function Particles() {
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative py-24 px-6">
+    <section id="contact" className="relative py-24 px-6 overflow-hidden">
       <div className="max-w-5xl mx-auto">
         <div className="relative glass rounded-[2rem] overflow-hidden p-10 md:p-16 text-center shadow-elegant">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-accent/20 to-transparent" />
           <Particles />
-          <div className="relative">
+
+          <div className="relative z-10">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-4xl md:text-6xl font-bold leading-tight max-w-3xl mx-auto"
             >
-              Let's build something{" "}
+              Let’s build something{" "}
               <span className="text-gradient">impactful.</span>
             </motion.h2>
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -57,6 +57,8 @@ export default function Contact() {
               engagements. If you're shipping something real, I'd love to hear
               about it.
             </motion.p>
+
+            {/* CTA Buttons */}
             <div className="mt-8 flex flex-wrap gap-3 justify-center">
               <a
                 href="mailto:ritikgupta2513@gmail.com"
@@ -64,6 +66,7 @@ export default function Contact() {
               >
                 Hire Me
               </a>
+
               <a
                 href="/Resume/Ritik_Kumar_Gupta.pdf"
                 download="Ritik_Kumar_Gupta_Resume.pdf"
@@ -71,6 +74,7 @@ export default function Contact() {
               >
                 View Resume
               </a>
+
               <a
                 href="mailto:ritikgupta2513@gmail.com"
                 className="px-6 py-3 rounded-full glass font-medium hover:bg-white/10 transition"
@@ -78,11 +82,31 @@ export default function Contact() {
                 Contact Me
               </a>
             </div>
+
+            {/* SOCIAL LINKS */}
+            <div className="mt-10 flex justify-center gap-6">
+              <a
+                href="https://www.linkedin.com/in/ritik-gupta-a69253229/"
+                target="_blank"
+                className="group p-3 rounded-full glass hover:bg-white/10 transition"
+              >
+                <FaLinkedinIn className="w-6 h-6 group-hover:scale-110 transition" />
+              </a>
+
+              <a
+                href="https://github.com/Ritik2513"
+                target="_blank"
+                className="group p-3 rounded-full glass hover:bg-white/10 transition"
+              >
+                <FaGithub className="w-6 h-6 group-hover:scale-110 transition" />
+              </a>
+            </div>
           </div>
         </div>
+
         <footer className="mt-16 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Ritik Kr. Gupta · Built with React, R3F, GSAP
-          & Framer Motion.
+          © {new Date().getFullYear()} Ritik Kr. Gupta · Built with React, R3F,
+          GSAP & Framer Motion.
         </footer>
       </div>
     </section>
