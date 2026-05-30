@@ -8,19 +8,21 @@ import Journey from "./pages/Journey";
 import DevOps from "./pages/Devops";
 import Contact from "./pages/Contact";
 import Intro from "./pages/Intro";
+import FrontendSkill from "./pages/FrontendSkill";
 
 const App = () => {
   return (
     <>
       <Navbar />
       <Drive />
-      <Intro/>
+      <Intro />
       <Impact />
-      <TechStack/>
+      <TechStack />
+      <FrontendSkill />
       <Projects />
-      <Journey/>
-      <DevOps/>
-      <Contact/>
+      <Journey />
+      <DevOps />
+      <Contact />
     </>
   );
 };
