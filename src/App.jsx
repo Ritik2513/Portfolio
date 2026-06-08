@@ -18,8 +18,8 @@ const App = () => {
       <Intro />
       <Impact />
       <TechStack />
-      <FrontendSkill />
       <Projects />
+      <FrontendSkill />
       <Journey />
       <DevOps />
       <Contact />

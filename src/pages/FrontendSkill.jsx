@@ -17,6 +17,22 @@ const projects = [
       "Performance Focused",
     ],
   },
+  {
+    title: "Margadarsana Consulting Revamp",
+    category: "Corporate Website Redesign",
+    image: "/FrontendSkill/mdc.png",
+    live: "https://margadarsanaconsulting.vercel.app/",
+    featured: true,
+    desc: "A complete redesign and modernization of a consulting firm's corporate website focused on improving user experience, visual storytelling, responsiveness, and brand credibility. Built with modern frontend technologies to deliver a fast, engaging, and professional digital presence.",
+    highlights: [
+      "Website Revamp",
+      "Responsive Design",
+      "Modern UI/UX",
+      "Performance Optimization",
+      "Professional Branding",
+      "Smooth Animations",
+    ],
+  },
 
   {
     title: "Click Melon",
@@ -63,12 +79,12 @@ export default function FrontendSkill() {
         viewport={{ once: true }}
         className="mb-16 max-w-2xl mx-auto text-center px-6"
       >
-        <p className="top">Portfolio Showcase</p>
-        <h2 className="heading">Frontend Craftsmanship</h2>
+        <p className="top">Frontend Craftsmanship</p>
+        <h2 className="heading">
+          Landing pages that move, breathe and convert.
+        </h2>
         <p className="subheading">
-          A curated collection of interfaces designed with a strong focus on
-          user experience, performance, accessibility, and modern web
-          engineering.
+         Built with React, Tailwind, Framer Motion and GSAP — pixel-perfect, performant and animated with intent.
         </p>
       </motion.div>
 
@@ -81,17 +97,17 @@ export default function FrontendSkill() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.15 }}
-            className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-xl hover:border-primary/30 transition-all duration-500 hover:-translate-y-2"
+            className="group overflow-hidden rounded-3xl border border-white/10 bg-white/3 backdrop-blur-xl hover:border-primary/30 transition-all duration-500 hover:-translate-y-2"
           >
             {/* Image */}
             <div className="relative overflow-hidden">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-[320px] object-cover transition duration-700 group-hover:scale-105"
+                className="w-full h-80 object-cover transition duration-700 group-hover:scale-105"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent" />
 
               {project.featured && (
                 <span className="absolute top-5 right-5 px-4 py-2 rounded-full bg-primary text-white text-xs font-medium">

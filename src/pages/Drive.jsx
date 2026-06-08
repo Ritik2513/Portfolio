@@ -14,7 +14,7 @@ const Drive = () => {
           className="inline-flex items-center gap-2 glass px-4 py-1.5 rounded-full text-xs md:text-sm text-muted-foreground mb-6"
         >
           <span className="text-emerald-400">●</span>
-          Available for select projects · Q3 2026
+          Open to Opportunities
         </motion.div>
 
         {/* Heading */}
@@ -37,8 +37,9 @@ const Drive = () => {
           transition={{ delay: 0.75, duration: 0.7 }}
           className="mt-6 max-w-xl mx-auto text-sm sm:text-base md:text-lg text-muted-foreground"
         >
-          MERN Stack Engineer delivering production-ready applications,
-          performance optimization and scalable deployments.
+          Full Stack Software Engineer with experience building
+          revenue-generating SaaS platforms, scalable APIs, and high-performance
+          web applications using React.js, Node.js, MongoDB, and Redis.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -72,7 +73,7 @@ const Drive = () => {
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-xs text-muted-foreground"
       >
         <span>Scroll</span>
-        <div className="w-[1px] h-10 bg-gradient-to-b from-foreground/60 to-transparent" />
+        <div className="w-px h-10 bg-linear-to-b from-foreground/60 to-transparent" />
       </motion.div>
     </section>
   );
