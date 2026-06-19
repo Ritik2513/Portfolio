@@ -10,6 +10,8 @@ const SKILLS = [
   { name: "HTML5", color: "#DD4B25" },
   { name: "CSS3", color: "#29A4D9" },
   { name: "JavaScript", color: "#F7DF1D" },
+  { name: "TypeScript", color: "#3178C6" },
+  { name: "NPM Package Builder", color: "#CB0000" },
   { name: "React.js", color: "#16D4F7" },
   { name: "Node.js", color: "#7CB700" },
   { name: "MongoDB", color: "#4EA34B" },
@@ -152,7 +154,7 @@ export default function TechSphere() {
             </motion.div>
 
             {/* RIGHT SIDE — 3D CANVAS */}
-            <div className="w-full h-[420px] sm:h-[520px] md:h-[620px] lg:h-[600px] ">
+            <div className="w-full h-105 sm:h-130 md:h-155 lg:h-150 ">
               <Canvas camera={{ position: [0, 0, 7], fov: 45 }} dpr={[1, 1.8]}>
                 <Suspense fallback={null}>
                   <ambientLight intensity={0.7} />

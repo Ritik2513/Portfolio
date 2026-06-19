@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { TextReveal } from "react-gsap-effects";
+import "react-gsap-effects/styles";
 
 const Drive = () => {
   return (
@@ -18,17 +20,17 @@ const Drive = () => {
         </motion.div>
 
         {/* Heading */}
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
+        <h1
           className="font-bold leading-[0.95] 
           text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 
-          max-w-4xl mx-auto"
+          max-w-5xl mx-auto"
         >
-          I build products that drive{" "}
-          <span className="text-gradient">real results.</span>
-        </motion.h1>
+          <TextReveal
+            text="I build products that drive real results"
+            duration={1.2}
+            stagger={0.05}
+          />
+        </h1>
 
         {/* Subtitle */}
         <motion.p

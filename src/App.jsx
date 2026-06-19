@@ -9,6 +9,7 @@ import DevOps from "./pages/Devops";
 import Contact from "./pages/Contact";
 import Intro from "./pages/Intro";
 import FrontendSkill from "./pages/FrontendSkill";
+import Npm from "./pages/Npm";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Intro />
       <Impact />
       <TechStack />
+      <Npm />
       <Projects />
       <FrontendSkill />
       <Journey />
