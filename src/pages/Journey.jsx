@@ -36,7 +36,7 @@ const milestones = [
       "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2070&auto=format&fit=crop",
   },
   {
-    year: "2025 - 2026",
+    year: "2025 - Present",
     title: "🏢 Click Melon Media Pvt. Ltd.",
     desc: "Architecting high-performance digital experiences for modern brands.",
     tags: ["LEADERSHIP", "SHIPPING", "MERN", "VPS Deployment"],
