@@ -147,11 +147,13 @@ const Npm = () => {
                   {`import { TextReveal } from "react-gsap-effects";
 import "react-gsap-effects/styles";
 
-<TextReveal
-  text="Build beautiful user experiences"
-  duration={1.2}
-  stagger={0.05}
-/>`}
+export default function App() {
+  return (
+    <TextReveal duration={1.2} stagger={0.05}>
+      Build beautiful user experiences
+    </TextReveal>
+  );
+}`}
                 </pre>
               </div>
             </div>
